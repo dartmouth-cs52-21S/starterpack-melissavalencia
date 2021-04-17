@@ -2,9 +2,14 @@
 // $('#main').html('Here we go!');
 
 // change require to es6 import style
-import $ from 'jquery';
+// import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './style.scss';
 
-let sec = 0;
+const App = () => <div className="test">All the REACT are belong to us!</div>;
 
-setInterval(() => { $('#main').html(`You have been on this page for ${sec} seconds.`); sec += 1; }, 1000);
+ReactDOM.render(<App />, document.getElementById('main'));
+
+// let sec = 0;
+// setInterval(() => { $('#main').html(`You have been on this page for ${sec} seconds.`); sec += 1; }, 1000);
