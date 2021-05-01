@@ -11,7 +11,13 @@ const About = (props) => {
   return <div> All there is to know about me </div>;
 };
 const Welcome = (props) => {
-  return <div>Welcome</div>;
+  return (
+    <div>
+      <Counter />
+      <Controls />
+      <div>Welcome</div>
+    </div>
+  );
 };
 
 const Test = (props) => {
@@ -41,8 +47,8 @@ const App = (props) => {
     <Router>
       <Nav />
       <Switch>
-        <Controls exact path="/" component={Welcome} />
-        <Counter path="/about" component={About} />
+        <Route exact path="/" component={Welcome} />
+        <Route path="/about" component={About} />
         <Route exact path="/test/:id" component={Test} />
         <Route component={FallBack} />
       </Switch>
